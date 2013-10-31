@@ -1,0 +1,33 @@
+	JavaScrip:ECMASCRIPT
+***********************************
+
+* Lenguaje scrip : ejecución limitada
+* EL Proposito de java scrip menejar dinamicamente el contenido de una pagina web
+
+	DOM:Document Object Model
+		- windows
+		- history
+		- location
+		- document
+
+* Sintaxis esta en C++
+* LEnguje debilmente tipado
+	- No se declaran variables explcito 
+	- NO hay tipo de dato explicito
+
+*Lenguaje interpretado
+
+* Problemaas de compatibilidad entre navegadores
+		Frameworks: Jquery
+
+
+TRABAJO DE PROGRAMACION AVANZADA
+********************************
+- Pagina educativa: historia,geografia,matemática
+- html 4
+- css 2
+- validar en : validator.w3.org
+- 7 Páginas
+- Texto,Imagenes,videos,sonido
+- Interactidad: aumentar tamaño de fuente, cambiar color : fondo y texto
+- Utilizar Carrusel Jquery

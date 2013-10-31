@@ -1,0 +1,54 @@
+<html>
+	<head>
+		<title>Ejemplos de JavaScipt</title>	
+		<style text="text/CSS">
+			div{
+				font-size : 25px;
+				color: yellow;
+			}
+		</style>
+		
+		<script text="text/JavaScript">
+			function cambiarPresentacion(){
+				var capa = document.getElementById("capa2");
+				var boton = document.frmPresentar.btnPresentacion;
+				
+				if(capa.style.display == "none"){
+					capa.style.display = "block";
+					boton.value = "Ocultar 1";
+				}else{
+					capa.style.display = "none";
+					boton.value = "Presentar";
+				}
+			}
+			
+			function cambiarVisibiliad(){
+				var capa = document.getElementById("capa3");
+				document.frmPresentar.btnVisibilidad.value = "Presentar";
+				
+				if(capa.style.visibility == "visible"){
+					capa.style.visibility="hidden";
+					boton.value = "Ocultar 2";
+				}else{
+					capa.style.visibility = "visible";
+					boton.value = "Presentar";
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<h1 style="text-align:center"> JavaScript - Ejemplos </h1>
+		<div id="capa1" style="background-color: red; visibility: visible;"> Primera Capa</div>
+		<div id="capa2" style="background-color: lightblue; visibility: visible;"> Segunda Capa</div>
+		<div id="capa3" style="background-color: orange; visibility: visible;"> Tercera Capa</div>
+		<div id="capa4" style="background-color: lightgreen; visibility: visible;"> Cuarta Capa</div>
+		<form	name="frmPresentar" action="#">
+			<input type="button" value="Ocultar 1" name="btnPresentacion" onclick="cambiarPresentacion();"/>
+			<input type="button" value="Ocultar 2" name="btnVisibilidad" onclick="cambiarVisibiliad();"/>
+		</form>
+		
+		<div style="text-align:center; font-size:20pt;">
+			<a href="Index.html">Volver</a>
+		</div>
+	</body>
+</html>

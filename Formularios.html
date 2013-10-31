@@ -1,0 +1,51 @@
+<html>
+	<head>
+		<title>Ejemplos de JavaScipt</title>	
+		<script type="text/JavaScript" language="JavaScript">
+			function Presentar(){
+				//alert("hola \"Raul\"");
+				//alert('hola "Raul"');
+				//alert("Hola d´allorso");	
+				var nombre;
+				var edad;
+				var capa;
+				nombre = document.frmNombre.txtNombre.value;
+				edad = parseInt( document.frmNombre.txtEdad.value);
+				if( edad < 18){
+					msje = nombre + " es menor de edad";
+				}else{
+					msje = nombre + " es mayor de edad";
+				}
+				//alert(msje);
+				capa = document.getElementById( "texto");
+				capa.innerHTML = msje;
+				//capa.innerText = msje;
+			}
+		</script>
+	</head>
+	<body style="background-image:url(fondo.png);">
+	<div style="background-position:relative;text-align:center;">
+		<h1 style="background-color:rgba( 100, 150, 250, 0.3); padding:15pt;"> JavaScript - Formularios </h1>
+	</div>	
+		<form name="frmNombre" action="#" method="get">
+			<table>
+				<tr>
+					<td>Nombre</td>
+					<td><input type="text" name="txtNombre"/></td>
+				</tr>
+				<tr>
+					<td>Edad</td>
+					<td><input type="text" name="txtEdad"/></td>
+				</tr>
+			</table><br/>
+			<input type="button" name="btnPresentar" value="Presentar" onclick="Presentar();"/>
+			<input type="reset" value="Limpar">
+		</form>
+		<div Id="texto">
+		</div>
+		
+		<div>
+			<a href="index.html">Volver</a>
+		</div>
+	</body>
+</html>

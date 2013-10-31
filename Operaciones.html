@@ -1,0 +1,148 @@
+<html>
+<head>
+	<title>Ejemplos de JavaScript</title>
+	<script type="text/JavaScript" language="JavaScript">
+		function Presentar(){
+			var numero;
+			var ini,fin;
+			
+			operacion = document.frmNumero.cboOperacion.selectedIndex;
+			numero = parseInt( document.frmNumero.txtNumero.value);
+			ini = parseInt( document.frmNumero.txtInicio.value);
+			fin = parseInt( document.frmNumero.txtFin.value);
+			switch(operacion){	
+				case 1: presentarSuma( numero, ini, fin);
+						break;
+				case 2: presentarResta( numero, ini, fin);
+						break;
+				case 3: presentarProducto( numero, ini, fin);
+						break;
+				case 4: presentarDivision( numero, ini, fin);
+						break;
+				default: alert("Seleccione una Operacion");
+						 break;
+			}
+		}
+		
+		function presentarSuma ( numero, inicio, final){
+			var capa;
+			var tabla = "";
+			
+			tabla = "<table style=\"width:600px; border: 2px solid; border-collapse:collapse\">";
+			tabla += "<tr style=\"border: 2px solid\">";
+			tabla += "<td >*</td>";
+			for( var i =inicio; i<=final; i++){
+				tabla += "<td>" + i + "</td>";
+			}
+			tabla += "</tr>";
+			
+			tabla += "<tr>";
+			tabla += "<td >" + numero + "</td>";
+			for( var j=inicio; j<=final; j++){
+				tabla += "<td>" + (numero+j) + "</td>";
+			}
+			tabla += "</tr>";
+			tabla += "</table>";
+			
+			capa = document.getElementById("operaciones");
+			capa.innerHTML = tabla;
+		}
+		
+		function presentarResta ( numero, inicio, final){
+			var capa;
+			var tabla = "";
+			
+			tabla = "<table style=\"width:600px;\">";
+			tabla += "<tr>";
+			tabla += "<td>*</td>";
+			for( var i =inicio; i<=final; i++){
+				tabla += "<td>" + i + "</td>";
+			}
+			tabla += "</tr>";
+			
+			tabla += "<tr>";
+			tabla += "<td>" + numero + "</td>";
+			for( var j=inicio; j<=final; j++){
+				tabla += "<td>" + (numero-j) + "</td>";
+			}
+			tabla += "</tr>";
+			tabla += "</table>";
+			
+			capa = document.getElementById("operaciones");
+			capa.innerHTML = tabla;
+		}
+		
+		function presentarProducto( numero, inicio, final){
+			var capa;
+			var tabla = "";
+			
+			tabla = "<table style=\"width:600px;\">";
+			tabla += "<tr>";
+			tabla += "<td>*</td>";
+			for( var i =inicio; i<=final; i++){
+				tabla += "<td>" + i + "</td>";
+			}
+			tabla += "</tr>";
+			
+			tabla += "<tr>";
+			tabla += "<td>" + numero + "</td>";
+			for( var j=inicio; j<=final; j++){
+				tabla += "<td>" + (numero*j) + "</td>";
+			}
+			tabla += "</tr>";
+			tabla += "</table>";
+			
+			capa = document.getElementById("operaciones");
+			capa.innerHTML = tabla;
+		}
+		
+		function presentarDivision( numero, inicio, final){
+			var capa;
+			var tabla = "";
+			
+			tabla = "<table style=\"width:600px;\">";
+			tabla += "<tr>";
+			tabla += "<td>*</td>";
+			for( var i =inicio; i<=final; i++){
+				tabla += "<td>" + i + "</td>";
+			}
+			tabla += "</tr>";
+			
+			tabla += "<tr>";
+			tabla += "<td>" + numero + "</td>";
+			for( var j=inicio; j<=final; j++){
+				tabla += "<td>" + (numero/j) + "</td>";
+			}
+			tabla += "</tr>";
+			tabla += "</table>";
+			
+			capa = document.getElementById("operaciones");
+			capa.innerHTML = tabla;
+		}
+	</script>
+</head>
+<body>
+	<h1>JavaScript - Etiquetas creadas</h1>
+	<form name="frmNumero" action="#">
+		Operaci&oacute;n: <select name="cboOperacion">
+							<option value="0">--Seleccione una operaci&oacute;n--</option>
+							<option value="1234">Suma</option>
+							<option value="2345">Resta</option>
+							<option value="0120">Multiplicaci&oacute;n</option>
+							<option value="4321">Divisi&oacute;n</option>
+						 </select><br/>
+		N&uacute;mero: <input type="text" name="txtNumero" value=""><br/>
+		Desde: <input type="text" name="txtInicio" value="1"> 
+		hasta: <input type="text" name="txtFin" value="12"> <br/>
+		<input type="button" value="Presentar" onclick="Presentar();" /> 
+		<input type="reset" value="Reiniciar"/> 
+	</form>
+	<div>
+		<h2>Tabla de operaciones de Multiplicar</h2>
+		<div Id="operaciones">
+		</div>
+	</div>
+	
+	<div><a href="index.html">Volver</a></div>
+</body>
+</html>

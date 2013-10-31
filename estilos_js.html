@@ -1,0 +1,46 @@
+<html>
+	<head>
+		<title>Ejemplos de JavaScipt</title>
+		<script type="text/javascript">
+			function aumentar(){
+				var capa = document.getElementById("texto");
+				var tamanho = document.frmFormato.txtTamanio.value;
+				var color = document.frmFormato.txtColor.value;
+				/*Propiedades de CSS --> JavaScript
+				color --> color
+				text-align --> textAlign
+				font-size --> fontSize
+				font-family --> fontFamily
+				... segunda palabra se pone en mayuscula y se suprime el GUIÓN
+				*/
+				capa.style.fontSize = tamanho + "px";
+				capa.style.color = color;
+			}
+			
+			function restablecer(){
+				var capa = document.getElementById("texto");
+				var form = document.frmFormato;
+				
+				capa.style.color= "black";
+				capa.style.fontSize = "16px";
+				form.txtColor.value = "black";
+				form.txtTamanio.value = "13";				
+			}
+		</script>
+	</head>
+	<body>
+		<h1> JavaScript - Ejemplos </h1>
+		<div id="texto">
+			Este texto cambiar&aacute; su apariencia.
+		</div>
+		<form name="frmFormato" action="#">
+			Color del Texto: <input type="text" name="txtColor" value="black"/> <br/>
+			Tamaño del Texto: <input type="text" name="txtTamanio" value="13"/> <br/>
+			<input type="button" value="Aumentar" onclick="aumentar();"/>
+			<input type="reset" value="Restablecer" onclick="restablecer();"/>
+		</form>
+		<div style="text-align:center; font-size:20pt;">
+			<a href="Index.html">Volver</a>
+		</div>
+	</body>
+</html>
